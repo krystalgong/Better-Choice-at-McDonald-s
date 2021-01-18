@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Better Choice at McDonald's</title>
+        <link rel="stylesheet" href="styles_v2.css">
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <form style="left: 800px; position: absolute; top: 0px;" action='/recommendationforyou' method='POST'>
+            <h4>Enter your standard for the following nutrition indexes:</h4>
+            Calories: <input type="text" id="Calories" name="Calories" placeholder='368 (2000 kcal/day)'>
+            Fat: <input type="text" id="Fat" name="Fat" placeholder='30 (45-55 g/day)'><br>
+            Sodium: <input type="text" id="Sodium" name="Sodium" placeholder='495 (2000-2500 mg/day)'>
+            Sugars: <input type="text" id="Sugars" name="Sugars" placeholder='30 (35 g/day)'><br>
+            Protein: <input type="text" id="Protein" name="Protein" placeholder="13 (1 g/kg)"> 
+            Carbohydrates: <input type="text" id="Carbohydrates" name="Carbohydrates" placeholder='47 (150-300 g/day)'>
+            <input style="left: 500px; position: absolute; top: 103px;" type="submit" value = Submit />
+        </form>
+        <select style="left: 1325px; position: absolute; top: 170px;" name="select" id="selectButton"></select>
+        <div>
+            <label style="left: 860px; position: absolute; top: 170px;" for="plot">sort left bar chart</label>
+            <input style="left: 975px; position: absolute; top: 170px;" type="checkbox" id="switch1" class="product-list">
+            <label style="left: 1080px; position: absolute; top: 170px;" for="plot">sort right bar chart</label>
+            <input style="left: 1205px; position: absolute; top: 170px;" type="checkbox" id="switch2" class="product-list">
+        </div>
+        <script type="text/javascript">
+            $('.product-list').on('change', function() {
+            $('.product-list').not(this).prop('checked', false);  
+            });
+        </script>
+        <svg id='wholebarchart' width="800" height="800" style="left: 800px; position: absolute; top: 200px;"></svg>
+        <svg id='treemap' width="700" height="700" style="left: 50px; position: absolute; top: 50px;"></svg>
+        <!-- <script src="/static/main.js"></script> -->
+        <script src="pretty_tree_map_v4.js"></script>
+    </body>
+</html>

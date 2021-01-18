@@ -1,0 +1,128 @@
+h2 {
+    font-family: Brush Script MT, Brush Script Std, cursive;
+    font-size: 50px;
+    text-align: left;
+    text-indent: 80px;
+    top: 0px;
+  }
+  
+  h3 {
+    position: relative;
+    font-family: Helvetica;
+    font-size: 20px;
+    /* text-align: left;
+    text-indent: 50px; */
+    left: 70px;
+    top: -450px;
+  }
+  
+  /* input[type=text], select {
+      width: 100%;
+      padding: 12px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+  } */
+  
+  /* .label{
+      font-family: 'Titillium Web', sans-serif;
+      white-space: normal;
+      word-break: break-all;
+      word-wrap: break-word; */
+  
+  /* } */
+  
+  .box1{
+    /* position: absolute;
+    /* right: -750px; */
+    /* left: 770px;
+    top: -130px;
+      width: 800px;
+      height: 120px; */ 
+    background: rgb(237, 209, 250);
+    border-radius: 10px;
+      /* margin: 10px; */
+    
+  }
+  
+  div.box2 {
+    position: relative;
+    /* right: -750px; */
+    left: 50px;
+    top: 70px;
+     width: 100px;
+      /* height: 520px; */
+    background: rgb(237, 209, 250);
+      border-radius: 10px;
+      margin: auto;
+  }
+  
+  .shadow {
+      position: relative;
+      /* max-width: 270px; */
+      box-shadow: 0px 1px 4px rgba(0,0,0,0.3),
+                  0px 0px 20px rgba(0,0,0,0.1) inset;
+  }
+  
+  .shadow::before,
+  .shadow::after {
+     content:"";
+     position:absolute;
+     z-index:-1;
+  }
+  
+  .shadow::before,
+  .shadow::after {
+     content:"";
+     position:absolute;
+     z-index:-1;
+     bottom:15px;
+     left:10px;
+     width:50%;
+     height:20%;
+  }
+  
+  .shadow::before,
+  .shadow::after {
+     content:"";
+     position:absolute;
+     z-index:-1;
+     bottom:15px;
+     left:10px;
+     width:50%;
+     height:20%;
+     box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+     transform:rotate(-3deg);
+  }
+  
+  .shadow::after{
+     right:10px;
+     left:auto;
+     transform:rotate(3deg);
+   }
+  
+  input[type=submit] {
+    background-color: #9a41ca;
+    border-radius: 6px;
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 6px 10px;
+    text-decoration: none;
+    margin: 0px 2px;
+    cursor: pointer;
+  }
+  
+  div.tooltip {
+      position: absolute;
+      text-align: left;
+      width: 180px;
+      height: 60px;
+      padding: 2px;
+      font: 12px sans-serif;
+      background: rgb(124, 246, 246);
+      border: 0px;
+      border-radius: 8px;
+      pointer-events: none;
+    }

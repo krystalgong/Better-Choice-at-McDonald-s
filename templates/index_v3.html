@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Better Choice at McDonald's</title>
+        <link rel="stylesheet" href="styles_v4.css">
+        <link rel="stylesheet" href="styles_v3.css">
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <h2>Better Choice at McDonald's</h2>
+        <div class="box1 shadow" style="left: 800px; position: absolute; top: 20px; font-family: Titillium Web;">
+            <!-- <form action='/recommendationforyou' method='POST'> style="left: 800px; position: absolute; top: 0px; font-family: Helvetica;"  -->
+            <form action='/recommendationforyou' method='POST'>
+                <span style=' white-space:pre;'><h4>    Enter your standard for the following nutrition indexes:    </h4></span>
+                <span style=' white-space:pre;'>    Calories: <input type="text" id="Calories" name="Calories" placeholder='368 (2000 kcal/day)'></span>
+                <span style=' white-space:pre;'>Fat:                        <input type="text" id="Fat" name="Fat" placeholder='30 (45-55 g/day)'><br></span>
+                <span style=' white-space:pre;'>    Sodium:  <input type="text" id="Sodium" name="Sodium" placeholder='495 (2000-2500 mg/day)'></span>
+                <span style=' white-space:pre;'>Sugars:                 <input type="text" id="Sugars" name="Sugars" placeholder='30 (35 g/day)'><br></span>
+                <span style=' white-space:pre;'>    Protein:   <input type="text" id="Protein" name="Protein" placeholder="13 (1 g/kg)"></span>
+                <span style=' white-space:pre;'>Carbohydrates:  <input type="text" id="Carbohydrates" name="Carbohydrates" placeholder='47 (150-300 g/day)'></span>
+                <span style=' white-space:pre;'>    <input type="submit" style="font-family: Titillium Web" value = Submit />    </span>
+                <!-- style="left: 500px; position: absolute; top: 103px;" -->
+            </form>
+            <br>
+        </div>
+
+            <!-- <p><span class="btn btn-primary">Schedule a Trip</span></p> -->
+        
+        <!-- </div> -->
+        <select style="left: 1275px; position: absolute; top: 220px;" name="select" id="selectButton"></select>
+        <div>
+            <label style="left: 810px; position: absolute; top: 220px; font-family: Titillium Web" for="plot">sort left bar chart</label>
+            <input style="left: 930px; position: absolute; top: 224px;" type="checkbox" id="switch1" class="product-list">
+            <label style="left: 1030px; position: absolute; top: 220px; font-family: Titillium Web" for="plot">sort right bar chart</label>
+            <input style="left: 1160px; position: absolute; top: 224px;" type="checkbox" id="switch2" class="product-list">
+        </div>
+        <script type="text/javascript">
+            $('.product-list').on('change', function() {
+            $('.product-list').not(this).prop('checked', false);
+            });
+        </script>
+        <svg id='wholebarchart' width="800" height="800" style="left: 800px; position: absolute; top: 270px;"></svg>
+        <svg id='treemap' width="700" height="700" style="left: 50px; position: absolute; top: 120px;"></svg>
+        <!-- <script src="/static/main.js"></script> -->
+        <script src="pretty_tree_map_v6.js"></script>
+    </body>
+</html>

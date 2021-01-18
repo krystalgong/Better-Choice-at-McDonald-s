@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recommendation</title>
+        <!-- <link rel="stylesheet" href="styles.css"> -->
+        <link rel="stylesheet" href="styles_v2.css">
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <!-- <form action="/recommendation" method="POST">
+            <h4>Enter your standard indexes for one meal and we will help you to minimize calories:</h4>
+            Fat: <input type="text" id="Fat" placeholder=30><br>
+            Sodium: <input type="text" id="Sodium" placeholder=495>
+            Sugars (lower): <input type="text" id="Sugars_lower" placeholder=30>
+            Sugars (upper): <input type="text" id="Sugars_upper" placeholder=30><br>
+            Protein (lower): <input type="text" id="Protein_lower" placeholder=13> 
+            Protein (upper): <input type="text" id="Protein_upper" placeholder=13> 
+            Carbohydrates (lower): <input type="text" id="Carbohydrates_lower" placeholder=47>
+        </form> -->
+        <form action="/recommendationresult" method="POST">
+            <label for="plot">Breakfast</label>
+            <input type="checkbox" name="switch1">
+            <label for="plot">Beef & Pork</label>
+            <input type="checkbox" name="switch2">
+            <label for="plot">Chicken & Fish</label>
+            <input type="checkbox" name="switch3">
+            <label for="plot">Salads</label>
+            <input type="checkbox" name="switch4">
+            <label for="plot">Snacks & Sides</label>
+            <input type="checkbox" name="switch5">
+            <label for="plot">Desserts</label>
+            <input type="checkbox" name="switch6">
+            <label for="plot">Beverages</label>
+            <input type="checkbox" name="switch7">
+            <label for="plot">Coffee & Tea</label>
+            <input type="checkbox" name="switch8">
+            <labelfor="plot">Smoothies & Shakes</label>
+            <input type="checkbox" name="switch9">
+            <input type="submit" value = Search />
+        </form>
+
+            <!-- <label style="left: 0px; position: absolute; top: 170px;" for="plot">Breakfast</label>
+            <input style="left: 75px; position: absolute; top: 170px;" type="checkbox" id="switch1">
+            <label style="left: 1080px; position: absolute; top: 170px;" for="plot">Beef & Pork</label>
+            <input style="left: 1205px; position: absolute; top: 170px;" type="checkbox" id="switch2">
+            <label style="left: 1080px; position: absolute; top: 170px;" for="plot">Chicken & Fish</label>
+            <input style="left: 1205px; position: absolute; top: 170px;" type="checkbox" id="switch3">
+            <label style="left: 1080px; position: absolute; top: 170px;" for="plot">Salads</label>
+            <input style="left: 1205px; position: absolute; top: 170px;" type="checkbox" id="switch4">
+            <label style="left: 1080px; position: absolute; top: 170px;" for="plot">Snacks & Sides</label>
+            <input style="left: 1205px; position: absolute; top: 170px;" type="checkbox" id="switch5">
+            <label style="left: 1080px; position: absolute; top: 170px;" for="plot">Desserts</label>
+            <input style="left: 1205px; position: absolute; top: 170px;" type="checkbox" id="switch6">
+            <label style="left: 1080px; position: absolute; top: 170px;" for="plot">Beverages</label>
+            <input style="left: 1205px; position: absolute; top: 170px;" type="checkbox" id="switch7">
+            <label style="left: 1080px; position: absolute; top: 170px;" for="plot">Coffee & Tea</label>
+            <input style="left: 1205px; position: absolute; top: 170px;" type="checkbox" id="switch8">
+            <label style="left: 1080px; position: absolute; top: 170px;" for="plot">Smoothies & Shakes</label>
+            <input style="left: 1205px; position: absolute; top: 170px;" type="checkbox" id="switch9"> -->
+            
+
+            {% if show %}
+                hello here is the result: </br>
+                Your minimized calories is {{total_calories}} </br>
+                Items are the following:
+                {% for i in range(0, len) %}
+                    <li>{{Items[i]}}</li>
+                {% endfor %}</br>
+                nutrition indexes: {{results}}
+            {% endif %}
+            <a href="/">Back</a></br>
+    </body>
+</html>
+
+
+

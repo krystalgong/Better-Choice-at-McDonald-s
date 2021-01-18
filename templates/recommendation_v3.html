@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Recommendation</title>
+        <link rel="stylesheet" href="styles_v1.css">
+        <!-- <link rel="stylesheet" href="styles_v3.css"> -->
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.3/jquery.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com"> 
+        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap" rel="stylesheet">
+
+
+    </head>
+    <style>
+    .box2 {
+        background: rgb(237, 209, 250);
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        .shadow {
+            position: relative;
+            /* max-width: 270px; */
+            box-shadow: 0px 1px 4px rgba(0,0,0,0.3),
+                        0px 0px 20px rgba(0,0,0,0.1) inset;
+        }
+
+        .shadow::before,
+        .shadow::after {
+        content:"";
+        position:absolute;
+        z-index:-1;
+        }
+
+        .shadow::before,
+        .shadow::after {
+        content:"";
+        position:absolute;
+        z-index:-1;
+        bottom:15px;
+        left:10px;
+        width:50%;
+        height:20%;
+        }
+
+        .shadow::before,
+        .shadow::after {
+        content:"";
+        position:absolute;
+        z-index:-1;
+        bottom:15px;
+        left:10px;
+        width:50%;
+        height:20%;
+        box-shadow:0 15px 10px rgba(0, 0, 0, 0.7);
+        transform:rotate(-3deg);
+        }
+
+        .shadow::after{
+        right:10px;
+        left:auto;
+        transform:rotate(3deg);
+        }
+
+        input[type=submit] {
+        background-color: #9a41ca;
+        border-radius: 6px;
+        border: none;
+        color: rgb(255, 255, 255);
+        padding: 6px 10px;
+        text-decoration: none;
+        margin: 0px 2px;
+        cursor: pointer;
+        }
+        h3 {
+            position: absolute;
+            font-size: 20px;
+            /* text-align: left;
+            text-indent: 50px; */
+            left: 40px;
+            top: 10px;
+            }
+    </style>
+    <body>
+        <div class="box2 shadow" style='font-family: Titillium Web; width:290px; height:650px; position: absolute; left: 40px; top: 20px;'>
+            <h3 style='font-family: Titillium Web;'>Select categories: <br> we will minimize calories</h3>
+            <form style='font-family: Titillium Web;'action="/recommendationresult" method="POST">
+                <label style="left: 40px; position: absolute; top: 200px;" for="plot">Breakfast</label>
+                <input style="left: 200px; position: absolute; top: 200px;" type="checkbox" id="switch1" name="switch1">
+                <label style="left: 40px; position: absolute; top: 240px;" for="plot">Beef & Pork</label>
+                <input style="left: 200px; position: absolute; top: 240px;" type="checkbox" id="switch2" name="switch2">
+                <label style="left: 40px; position: absolute; top: 280px;" for="plot">Chicken & Fish</label>
+                <input style="left: 200px; position: absolute; top: 280px;" type="checkbox" id="switch3" name="switch3">
+                <label style="left: 40px; position: absolute; top: 320px;" for="plot">Salads</label>
+                <input style="left: 200px; position: absolute; top: 320px;" type="checkbox" id="switch4" name="switch4">
+                <label style="left: 40px; position: absolute; top: 360px;" for="plot">Snacks & Sides</label>
+                <input style="left: 200px; position: absolute; top: 360px;" type="checkbox" id="switch5" name="switch5">
+                <label style="left: 40px; position: absolute; top: 400px;" for="plot">Desserts</label>
+                <input style="left: 200px; position: absolute; top: 400px;" type="checkbox" id="switch6" name="switch6">
+                <label style="left: 40px; position: absolute; top: 440px;" for="plot">Beverages</label>
+                <input style="left: 200px; position: absolute; top: 440px;" type="checkbox" id="switch7" name="switch7">
+                <label style="left: 40px; position: absolute; top: 480px;" for="plot">Coffee & Tea</label>
+                <input style="left: 200px; position: absolute; top: 480px;" type="checkbox" id="switch8" name="switch8">
+                <label style="left: 40px; position: absolute; top: 520px;" for="plot">Smoothies & Shakes</label>
+                <input style="left: 200px; position: absolute; top: 520px;" type="checkbox" id="switch9" name="switch9">
+                <input style="left: 170px; position: absolute; top: 560px; font-family: Titillium Web;" type="submit" value = Search />
+            </form>
+        </div>
+        
+        <div style="left: 420px; position: absolute; top: 0px; font-family: Titillium Web;">
+            <svg id='resulttree' width="800" height="400" style=" position: absolute; left: 10px; top: 10px;font-family: Titillium Web;"></svg>
+            {% if show %}
+            <script>
+                var width = 800;
+                var dx = 20;
+                var dy = width/6;
+                var margin = ({top: 10, right: 40, bottom: 10, left: 95});
+
+                var a = '{{ Items|tojson }}'.replace(/"/g,'').replace(/↵/g,"\n");
+                //console.log(a);
+                var table = d3.csvParse(a);
+                //console.log(table);
+                const root = d3.stratify()
+                            .id(function(d) { return d.name; })
+                            .parentId(function(d) { return d.parent; })(table);
+                //console.log(root);
+
+
+                root.x0 = dy / 2;
+                root.y0 = 0;
+                root.descendants().forEach((d, i) => {
+                    d.id = i;
+                    d._children = d.children;
+                    //if (d.depth && d.data.name.length !== 7) d.children = null;
+                });
+                //console.log(root);
+                const svg = d3.select("#resulttree")
+                            .attr("viewBox", [-margin.left, -margin.top, width, dx])
+                            .style("font", "10px sans-serif")
+                            .style("user-select", "none");
+                const gLink = svg.append("g")
+                            .attr("fill", "none")
+                            .attr("stroke", "#555")
+                            .attr("stroke-opacity", 0.4)
+                            .attr("stroke-width", 1.5);
+
+                const gNode = svg.append("g")
+                    .attr("cursor", "pointer")
+                    .attr("pointer-events", "all");  
+                
+                var diagonal = d3.linkHorizontal().x(d => d.y).y(d => d.x);
+                var tree = d3.tree().nodeSize([dx, dy]);
+
+                function update(source) {
+                    const duration = d3.event && d3.event.altKey ? 2500 : 250;
+                    const nodes = root.descendants().reverse();
+                    const links = root.links();
+
+                    // Compute the new tree layout.
+                    tree(root);
+
+                    let left = root;
+                    let right = root;
+                    root.eachBefore(node => {
+                    if (node.x < left.x) left = node;
+                    if (node.x > right.x) right = node;
+                    });
+
+                    const height = right.x - left.x + margin.top + margin.bottom;
+
+                    const transition = svg.transition()
+                        .duration(duration)
+                        .attr("viewBox", [-margin.left, left.x - margin.top, width, height])
+                        .tween("resize", window.ResizeObserver ? null : () => () => svg.dispatch("toggle"));
+
+                    // Update the nodes…
+                    const node = gNode.selectAll("g")
+                    .data(nodes, d => d.id);
+
+                    // Enter any new nodes at the parent's previous position.
+                    const nodeEnter = node.enter().append("g")
+                        .attr("transform", d => `translate(${source.y0},${source.x0})`)
+                        .attr("fill-opacity", 0)
+                        .attr("stroke-opacity", 0)
+                        .on("click", (event, d) => {
+                        //console.log(d);
+                        if (d.depth==2){console.log('hello',d.data.name);}
+                        d.children = d.children ? null : d._children;
+                        update(d);
+                        });
+
+                    nodeEnter.append("circle")
+                        .attr("r", 6)
+                        .attr("fill", d => d._children ? "#884ea0" : "#d2b4de")
+                        .attr("stroke-width", 10);
+
+                    nodeEnter.append("text")
+                        .attr("dy", "0.31em")
+                        .attr("x", d => d._children ? -8 : 8)
+                        .attr('font-size','14px')
+                        .attr('font-family','Titillium Web')
+                        .attr("text-anchor", d => d._children ? "end" : "start")
+                        .text(d => d.data.name)
+                    .clone(true).lower()
+                        .attr("stroke-linejoin", "round")
+                        .attr("stroke-width", 3)
+                        .attr("stroke", "white")
+                        ;
+
+                    // Transition nodes to their new position.
+                    const nodeUpdate = node.merge(nodeEnter).transition(transition)
+                        .attr("transform", d => `translate(${d.y},${d.x})`)
+                        .attr("fill-opacity", 1)
+                        .attr("stroke-opacity", 1);
+
+                    // Transition exiting nodes to the parent's new position.
+                    const nodeExit = node.exit().transition(transition).remove()
+                        .attr("transform", d => `translate(${source.y},${source.x})`)
+                        .attr("fill-opacity", 0)
+                        .attr("stroke-opacity", 0);
+
+                    // Update the links…
+                    const link = gLink.selectAll("path")
+                    .data(links, d => d.target.id);
+
+                    // Enter any new links at the parent's previous position.
+                    const linkEnter = link.enter().append("path")
+                        .attr("d", d => {
+                        const o = {x: source.x0, y: source.y0};
+                        return diagonal({source: o, target: o});
+                        });
+                        //.attr('fill','#884EA0');
+
+                    // Transition links to their new position.
+                    link.merge(linkEnter).transition(transition)
+                        .attr("d", diagonal);
+
+                    // Transition exiting nodes to the parent's new position.
+                    link.exit().transition(transition).remove()
+                        .attr("d", d => {
+                        const o = {x: source.x, y: source.y};
+                        return diagonal({source: o, target: o});
+                        });
+
+                    // Stash the old positions for transition.
+                    root.eachBefore(d => {
+                    d.x0 = d.x;
+                    d.y0 = d.y;
+                    });
+                }
+
+                    update(root);         
+            </script>
+            <!-- you can put the svg here to replace the p -->
+            <!-- <p style="left: 10px; position: absolute; top: 20px;">
+                hello here is the result:
+                Your minimized calories is {{total_calories}} </br>
+                
+                nutrition indexes:</br>
+                 Fat:{{results['Fat']}}</br>
+                 Sodium:{{results['Sodium']}}</br>
+                 Sugars:{{results['Sugars']}}</br>
+                 Protein:{{results['Protein']}}</br>
+                 Carbohydrates:{{results['Carbohydrates']}}</br>
+            </p> -->
+                
+            {% endif %}
+            <a style='font-family: Titillium Web; position: absolute; top: 30px; left: 600px' href="/">Back</a></br>
+        </div>
+
+        <div style="left: 420px; position: absolute; top: 400px; font-family: Titillium Web;">
+            <svg id='stackbar' width="600" height="400" style=" position: relative; left: 50px; top: 10px;font-family: Titillium Web;"></svg>
+            {% if results2 %}
+                <script type="text/javascript">
+
+                var a = '{{results2|tojson}}';
+                // console.log('11111',a);
+                    
+                // set the dimensions and margins of the graph
+                var margin1 = {top: 10, right: 30, bottom: 20, left: 50};
+                var width1 = 500 - margin1.left - margin1.right;
+                var height1 = 300 - margin1.top - margin1.bottom;
+                
+                // append the svg object to the body of the page
+                var svg2 = d3.select("#stackbar")
+                    .append("svg")
+                    .attr("width", width1 + margin1.left + margin1.right)
+                    .attr("height", height1 + margin1.top + margin1.bottom)
+                    .append("g")
+                    .attr("transform",
+                          "translate(" + 50 + "," + 10 + ")");
+                
+                // Parse the Data
+                d3.csv('menu.csv').then(function(data2) {
+                    console.log(data2)
+
+                    data2 = data2.filter(function(obj){return a.includes(obj.Item);});
+                    console.log("After filtering:",data2)
+
+                    var groups = data2.keys()
+                    console.log(groups)
+
+                    // List of subgroups = header of the csv files = soil condition here
+                    var subgroups = ['Calories', 'Fat', 'Sodium', 'Sugars', 'Protein', 'Carbohydrates']
+                    
+                    result = d3.map(data2, 
+                    function(d){return[d.Item,d.Calories,d.Fat,d.Sodium,d.Sugars,d.Protein,d.Carbohydrates];}   
+                    );
+                    console.log('result: ',result)
+                  // List of groups = species here = value of the first column called group -> I show them on the X axis
+                //   var groups = d3.map(data2, function(d){
+                //      return(d.Item)}).keys()
+                    //  console.log('It is group: ',groups)
+                
+                  // Add X axis
+                  var x = d3.scaleBand()
+                      .domain(subgroups)
+                      .range([0, width1])
+                      .padding([0.2])
+                  svg2.append("g")
+                    .attr("transform", "translate(0," + height1 + ")")
+                    .call(d3.axisBottom(x).tickSizeOuter(0));
+                
+                  // Add Y axis
+                  var y = d3.scaleLinear()
+                    .domain([0, 100])
+                    .range([ height1, 0 ]);
+                  svg2.append("g")
+                    .call(d3.axisLeft(y));
+                
+                  // color palette = one color per subgroup
+                  var color = d3.scaleOrdinal()
+                    .domain(subgroups)
+                    .range(['#e41a1c','#377eb8','#4daf4a'])
+                
+                  // Normalize the data -> sum of each group must be 100!
+                  console.log('Before normalize:',data2)
+                  dataNormalized = []
+                  data2.forEach(function(d){
+                    // Compute the total
+                    tot = 0
+                    for (i in subgroups){ name=subgroups[i] ; tot += +d[name] }
+                    // Now normalize
+                    for (i in subgroups){ name=subgroups[i] ; d[name] = d[name] / tot * 100}
+                  })
+                
+                  //stack the data?  stack per subgroup
+                  var stackedData = d3.stack()
+                    .keys(subgroups)
+                    (data2)
+                    console.log('stackedData: ',stackedData)
+                
+                  // Show the bars
+                  svg2.append("g")
+                    .selectAll("g")
+                    // Enter in the stack data = loop key per key = group per group
+                    .data(stackedData)
+                    .enter().append("g")
+                      .attr("fill", function(d) { return color(d.key); })
+                      .selectAll("rect")
+                      // enter a second time = loop subgroup per subgroup to add all rectangles
+                      .data(function(d) { return d; })
+                      .enter().append("rect")
+                        .attr("x", function(d) { return x(d.data.group); })
+                        .attr("y", function(d) { return y(d[1]); })
+                        .attr("height", function(d) { return y(d[0]) - y(d[1]); })
+                        .attr("width",x.bandwidth())
+                })
+                
+                </script>
+            {% endif %}
+        </div>
+            
+    </body>
+</html>
+
+
+

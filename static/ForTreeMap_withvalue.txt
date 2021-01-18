@@ -1,0 +1,339 @@
+name,parent,value
+Breakfast,McDonald's,0
+Beef & Pork,McDonald's,0
+Chicken & Fish,McDonald's,0
+Salads,McDonald's,0
+Snacks & Sides,McDonald's,0
+Desserts,McDonald's,0
+Beverages,McDonald's,0
+Coffee & Tea,McDonald's,0
+Smoothies & Shakes,McDonald's,0
+Egg McMuffin,Breakfast,4.8
+Egg White Delight,Breakfast,4.8
+Sausage McMuffin,Breakfast,3.9
+Sausage McMuffin with Egg,Breakfast,5.7
+Sausage McMuffin with Egg Whites,Breakfast,5.7
+Steak & Egg McMuffin,Breakfast,6.5
+"Bacon, Egg & Cheese Biscuit ",Breakfast,0
+"Bacon, Egg & Cheese Biscuit with Egg Whites ",Breakfast,0
+Sausage Biscuit ,Breakfast,0
+Sausage Biscuit with Egg ,Breakfast,0
+Sausage Biscuit with Egg Whites ,Breakfast,0
+Southern Style Chicken Biscuit ,Breakfast,0
+Steak & Egg Biscuit ,Breakfast,0
+"Bacon, Egg & Cheese McGriddles",Breakfast,6.1
+"Bacon, Egg & Cheese McGriddles with Egg Whites",Breakfast,6.3
+Sausage McGriddles,Breakfast,5
+"Sausage, Egg & Cheese McGriddles",Breakfast,7.1
+"Sausage, Egg & Cheese McGriddles with Egg Whites",Breakfast,7.2
+"Bacon, Egg & Cheese Bagel",Breakfast,6.9
+"Bacon, Egg & Cheese Bagel with Egg Whites",Breakfast,7.1
+"Steak, Egg & Cheese Bagel",Breakfast,8.5
+Big Breakfast ,Breakfast,0
+Big Breakfast with Egg Whites ,Breakfast,0
+Big Breakfast with Hotcakes ,Breakfast,0
+Big Breakfast with Hotcakes and Egg Whites ,Breakfast,0
+Hotcakes,Breakfast,5.3
+Hotcakes and Sausage,Breakfast,6.8
+Sausage Burrito,Breakfast,3.9
+Hash Brown,Breakfast,2
+Cinnamon Melts,Breakfast,4
+Fruit & Maple Oatmeal,Breakfast,9.6
+Fruit & Maple Oatmeal without Brown Sugar,Breakfast,9.6
+Big Mac,Beef & Pork,7.4
+Quarter Pounder with Cheese,Beef & Pork,7.1
+Quarter Pounder with Bacon & Cheese,Beef & Pork,8
+Quarter Pounder with Bacon Habanero Ranch,Beef & Pork,8.3
+Quarter Pounder Deluxe,Beef & Pork,8.6
+Double Quarter Pounder with Cheese,Beef & Pork,10
+Hamburger,Beef & Pork,3.5
+Cheeseburger,Beef & Pork,4
+Double Cheeseburger,Beef & Pork,5.7
+Bacon Clubhouse Burger,Beef & Pork,9.5
+McDouble,Beef & Pork,5.2
+Bacon McDouble,Beef & Pork,5.7
+Daily Double,Beef & Pork,6.7
+Jalapeño Double,Beef & Pork,5.6
+McRib,Beef & Pork,7.3
+Premium Crispy Chicken Classic Sandwich,Chicken & Fish,7.5
+Premium Grilled Chicken Classic Sandwich,Chicken & Fish,7
+Premium Crispy Chicken Club Sandwich,Chicken & Fish,8.8
+Premium Grilled Chicken Club Sandwich,Chicken & Fish,8.3
+Premium Crispy Chicken Ranch BLT Sandwich,Chicken & Fish,8.1
+Premium Grilled Chicken Ranch BLT Sandwich,Chicken & Fish,7.6
+Bacon Clubhouse Crispy Chicken Sandwich,Chicken & Fish,10
+Bacon Clubhouse Grilled Chicken Sandwich,Chicken & Fish,9.5
+Southern Style Crispy Chicken Sandwich,Chicken & Fish,5.6
+McChicken,Chicken & Fish,5.1
+Bacon Cheddar McChicken,Chicken & Fish,6
+Bacon Buffalo Ranch McChicken,Chicken & Fish,5.7
+Buffalo Ranch McChicken,Chicken & Fish,5.2
+Premium McWrap Chicken & Bacon ,Chicken & Fish,0
+Premium McWrap Chicken & Ranch ,Chicken & Fish,0
+Premium McWrap Southwest Chicken ,Chicken & Fish,0
+Premium McWrap Chicken Sweet Chili ,Chicken & Fish,0
+Chicken McNuggets ,Chicken & Fish,0
+Filet-O-Fish,Chicken & Fish,5
+Premium Bacon Ranch Salad ,Salads,0
+Premium Bacon Ranch Salad with Crispy Chicken,Salads,9
+Premium Bacon Ranch Salad with Grilled Chicken,Salads,8.5
+Premium Southwest Salad ,Salads,0
+Premium Southwest Salad with Crispy Chicken,Salads,12.3
+Premium Southwest Salad with Grilled Chicken,Salads,11.8
+Chipotle BBQ Snack Wrap ,Snacks & Sides,0
+Honey Mustard Snack Wrap ,Snacks & Sides,0
+Ranch Snack Wrap ,Snacks & Sides,0
+Small French Fries,Snacks & Sides,2.6
+Medium French Fries,Snacks & Sides,3.9
+Large French Fries,Snacks & Sides,5.9
+Kids French Fries,Snacks & Sides,1.3
+Side Salad,Snacks & Sides,3.1
+Apple Slices,Snacks & Sides,1.2
+Fruit 'n Yogurt Parfait,Snacks & Sides,5.2
+Baked Apple Pie,Desserts,2.7
+Chocolate Chip Cookie,Desserts,1
+Oatmeal Raisin Cookie,Desserts,1
+Kids Ice Cream Cone,Desserts,1
+Hot Fudge Sundae,Desserts,6.3
+Hot Caramel Sundae,Desserts,6.4
+Strawberry Sundae,Desserts,6.3
+Coca-Cola Classic ,Beverages,0
+Diet Coke ,Beverages,0
+Dr Pepper ,Beverages,0
+Diet Dr Pepper ,Beverages,0
+Sprite ,Beverages,0
+1% Low Fat Milk Jug,Beverages,1
+Fat Free Chocolate Milk Jug,Beverages,1
+Minute Maid 100% Apple Juice Box,Beverages,6
+Minute Maid Orange Juice ,Beverages,0
+Dasani Water Bottle,Beverages,16.9
+Iced Tea ,Coffee & Tea,0
+Sweet Tea ,Coffee & Tea,0
+Coffee ,Coffee & Tea,0
+Latte ,Coffee & Tea,0
+Caramel Latte ,Coffee & Tea,0
+Hazelnut Latte ,Coffee & Tea,0
+French Vanilla Latte ,Coffee & Tea,0
+Latte with Sugar Free French Vanilla Syrup ,Coffee & Tea,0
+Nonfat Latte ,Coffee & Tea,0
+Nonfat Caramel Latte ,Coffee & Tea,0
+Nonfat Hazelnut Latte ,Coffee & Tea,0
+Nonfat French Vanilla Latte ,Coffee & Tea,0
+Nonfat Latte with Sugar Free French Vanilla Syrup ,Coffee & Tea,0
+Mocha ,Coffee & Tea,0
+Mocha with Nonfat Milk ,Coffee & Tea,0
+Caramel Mocha ,Coffee & Tea,0
+Nonfat Caramel Mocha ,Coffee & Tea,0
+Hot Chocolate ,Coffee & Tea,0
+Hot Chocolate with Nonfat Milk ,Coffee & Tea,0
+Regular Iced Coffee ,Coffee & Tea,0
+Caramel Iced Coffee ,Coffee & Tea,0
+Hazelnut Iced Coffee ,Coffee & Tea,0
+French Vanilla Iced Coffee ,Coffee & Tea,0
+Iced Coffee with Sugar Free French Vanilla Syrup ,Coffee & Tea,0
+Iced Mocha ,Coffee & Tea,0
+Iced Mocha with Nonfat Milk ,Coffee & Tea,0
+Iced Caramel Mocha ,Coffee & Tea,0
+Iced Nonfat Caramel Mocha ,Coffee & Tea,0
+Frappé Mocha ,Coffee & Tea,0
+Frappé Caramel ,Coffee & Tea,0
+Frappé Chocolate Chip ,Coffee & Tea,0
+Blueberry Pomegranate Smoothie ,Smoothies & Shakes,0
+Strawberry Banana Smoothie ,Smoothies & Shakes,0
+Mango Pineapple Smoothie ,Smoothies & Shakes,0
+Vanilla Shake ,Smoothies & Shakes,0
+Strawberry Shake ,Smoothies & Shakes,0
+Chocolate Shake ,Smoothies & Shakes,0
+Shamrock Shake ,Smoothies & Shakes,0
+McFlurry with M&M’s Candies ,Smoothies & Shakes,0
+McFlurry with Oreo Cookies ,Smoothies & Shakes,0
+McFlurry with Reese's Peanut Butter Cups ,Smoothies & Shakes,0
+Regular Biscuit,"Bacon, Egg & Cheese Biscuit ",5.3
+Large Biscuit,"Bacon, Egg & Cheese Biscuit ",5.8
+Regular Biscuit,"Bacon, Egg & Cheese Biscuit with Egg Whites ",5.4
+Large Biscuit,"Bacon, Egg & Cheese Biscuit with Egg Whites ",5.9
+Regular Biscuit,Sausage Biscuit ,4.1
+Large Biscuit,Sausage Biscuit ,4.6
+Regular Biscuit,Sausage Biscuit with Egg ,5.7
+Large Biscuit,Sausage Biscuit with Egg ,6.2
+Regular Biscuit,Sausage Biscuit with Egg Whites ,5.9
+Large Biscuit,Sausage Biscuit with Egg Whites ,6.4
+Regular Biscuit,Southern Style Chicken Biscuit ,5
+Large Biscuit,Southern Style Chicken Biscuit ,5.5
+Regular Biscuit,Steak & Egg Biscuit ,7.1
+Regular Biscuit,Big Breakfast ,9.5
+Large Biscuit,Big Breakfast ,10
+Regular Biscuit,Big Breakfast with Egg Whites ,9.6
+Large Biscuit,Big Breakfast with Egg Whites ,10.1
+Regular Biscuit,Big Breakfast with Hotcakes ,14.8
+Large Biscuit,Big Breakfast with Hotcakes ,15.3
+Regular Biscuit,Big Breakfast with Hotcakes and Egg Whites ,14.9
+Large Biscuit,Big Breakfast with Hotcakes and Egg Whites ,15.4
+Crispy Chicken,Premium McWrap Chicken & Bacon ,11.1
+Grilled Chicken,Premium McWrap Chicken & Bacon ,10.7
+Crispy Chicken,Premium McWrap Chicken & Ranch ,10.9
+Grilled Chicken,Premium McWrap Chicken & Ranch ,10.5
+Crispy Chicken,Premium McWrap Southwest Chicken ,11.1
+Grilled Chicken,Premium McWrap Southwest Chicken ,11.2
+Crispy Chicken,Premium McWrap Chicken Sweet Chili ,10.7
+Grilled Chicken,Premium McWrap Chicken Sweet Chili ,10.3
+4 piece,Chicken McNuggets ,2.3
+6 piece,Chicken McNuggets ,3.4
+10 piece,Chicken McNuggets ,5.7
+20 piece,Chicken McNuggets ,11.4
+40 piece,Chicken McNuggets ,22.8
+without Chicken,Premium Bacon Ranch Salad ,7.9
+without Chicken,Premium Southwest Salad ,8.1
+Crispy Chicken,Chipotle BBQ Snack Wrap ,4.6
+Grilled Chicken,Chipotle BBQ Snack Wrap ,4.3
+Crispy Chicken,Honey Mustard Snack Wrap ,4.3
+Grilled Chicken,Honey Mustard Snack Wrap ,4.1
+Crispy Chicken,Ranch Snack Wrap ,4.5
+Grilled Chicken,Ranch Snack Wrap ,4.3
+Small,Coca-Cola Classic ,16
+Medium,Coca-Cola Classic ,21
+Large,Coca-Cola Classic ,30
+Child,Coca-Cola Classic ,12
+Small,Diet Coke ,16
+Medium,Diet Coke ,21
+Large,Diet Coke ,30
+Child,Diet Coke ,12
+Small,Dr Pepper ,16
+Medium,Dr Pepper ,21
+Large,Dr Pepper ,30
+Child,Dr Pepper ,12
+Small,Diet Dr Pepper ,16
+Medium,Diet Dr Pepper ,21
+Large,Diet Dr Pepper ,30
+Child,Diet Dr Pepper ,12
+Small,Sprite ,16
+Medium,Sprite ,21
+Large,Sprite ,30
+Child,Sprite ,12
+Small,Minute Maid Orange Juice ,12
+Medium,Minute Maid Orange Juice ,16
+Large,Minute Maid Orange Juice ,22
+Small,Iced Tea ,16
+Medium,Iced Tea ,21
+Large,Iced Tea ,30
+Child,Iced Tea ,12
+Small,Sweet Tea ,16
+Medium,Sweet Tea ,21
+Large,Sweet Tea ,30
+Child,Sweet Tea ,12
+Small,Coffee ,12
+Medium,Coffee ,16
+Large,Coffee ,16
+Small,Latte ,12
+Medium,Latte ,16
+Large,Latte ,20
+Small,Caramel Latte ,12
+Medium,Caramel Latte ,16
+Large,Caramel Latte ,20
+Small,Hazelnut Latte ,12
+Medium,Hazelnut Latte ,16
+Large,Hazelnut Latte ,20
+Small,French Vanilla Latte ,12
+Medium,French Vanilla Latte ,16
+Large,French Vanilla Latte ,20
+Small,Latte with Sugar Free French Vanilla Syrup ,12
+Medium,Latte with Sugar Free French Vanilla Syrup ,16
+Large,Latte with Sugar Free French Vanilla Syrup ,20
+Small,Nonfat Latte ,12
+Medium,Nonfat Latte ,16
+Large,Nonfat Latte ,20
+Small,Nonfat Caramel Latte ,12
+Medium,Nonfat Caramel Latte ,16
+Large,Nonfat Caramel Latte ,20
+Small,Nonfat Hazelnut Latte ,12
+Medium,Nonfat Hazelnut Latte ,16
+Large,Nonfat Hazelnut Latte ,20
+Small,Nonfat French Vanilla Latte ,12
+Medium,Nonfat French Vanilla Latte ,16
+Large,Nonfat French Vanilla Latte ,20
+Small,Nonfat Latte with Sugar Free French Vanilla Syrup ,12
+Medium,Nonfat Latte with Sugar Free French Vanilla Syrup ,16
+Large,Nonfat Latte with Sugar Free French Vanilla Syrup ,20
+Small,Mocha ,12
+Medium,Mocha ,16
+Large,Mocha ,20
+Small,Mocha with Nonfat Milk ,12
+Medium,Mocha with Nonfat Milk ,16
+Large,Mocha with Nonfat Milk ,20
+Small,Caramel Mocha ,12
+Medium,Caramel Mocha ,16
+Large,Caramel Mocha ,20
+Small,Nonfat Caramel Mocha ,12
+Medium,Nonfat Caramel Mocha ,16
+Large,Nonfat Caramel Mocha ,20
+Small,Hot Chocolate ,12
+Medium,Hot Chocolate ,16
+Large,Hot Chocolate ,20
+Small,Hot Chocolate with Nonfat Milk ,12
+Medium,Hot Chocolate with Nonfat Milk ,16
+Large,Hot Chocolate with Nonfat Milk ,20
+Small,Regular Iced Coffee ,16
+Medium,Regular Iced Coffee ,22
+Large,Regular Iced Coffee ,32
+Small,Caramel Iced Coffee ,16
+Medium,Caramel Iced Coffee ,22
+Large,Caramel Iced Coffee ,32
+Small,Hazelnut Iced Coffee ,16
+Medium,Hazelnut Iced Coffee ,22
+Large,Hazelnut Iced Coffee ,32
+Small,French Vanilla Iced Coffee ,16
+Medium,French Vanilla Iced Coffee ,22
+Large,French Vanilla Iced Coffee ,32
+Small,Iced Coffee with Sugar Free French Vanilla Syrup ,16
+Medium,Iced Coffee with Sugar Free French Vanilla Syrup ,22
+Large,Iced Coffee with Sugar Free French Vanilla Syrup ,32
+Small,Iced Mocha ,12
+Medium,Iced Mocha ,16
+Large,Iced Mocha ,22
+Small,Iced Mocha with Nonfat Milk ,12
+Medium,Iced Mocha with Nonfat Milk ,16
+Large,Iced Mocha with Nonfat Milk ,22
+Small,Iced Caramel Mocha ,12
+Medium,Iced Caramel Mocha ,16
+Large,Iced Caramel Mocha ,22
+Small,Iced Nonfat Caramel Mocha ,12
+Medium,Iced Nonfat Caramel Mocha ,16
+Large,Iced Nonfat Caramel Mocha ,22
+Small,Frappé Mocha ,12
+Medium,Frappé Mocha ,16
+Large,Frappé Mocha ,22
+Small,Frappé Caramel ,12
+Medium,Frappé Caramel ,16
+Large,Frappé Caramel ,22
+Small,Frappé Chocolate Chip ,12
+Medium,Frappé Chocolate Chip ,16
+Large,Frappé Chocolate Chip ,22
+Small,Blueberry Pomegranate Smoothie ,12
+Medium,Blueberry Pomegranate Smoothie ,16
+Large,Blueberry Pomegranate Smoothie ,22
+Small,Strawberry Banana Smoothie ,12
+Medium,Strawberry Banana Smoothie ,16
+Large,Strawberry Banana Smoothie ,22
+Small,Mango Pineapple Smoothie ,12
+Medium,Mango Pineapple Smoothie ,16
+Large,Mango Pineapple Smoothie ,22
+Small,Vanilla Shake ,12
+Medium,Vanilla Shake ,16
+Large,Vanilla Shake ,22
+Small,Strawberry Shake ,12
+Medium,Strawberry Shake ,16
+Large,Strawberry Shake ,22
+Small,Chocolate Shake ,12
+Medium,Chocolate Shake ,16
+Large,Chocolate Shake ,22
+Medium,Shamrock Shake ,16
+Large,Shamrock Shake ,22
+Small,McFlurry with M&M’s Candies ,10.9
+Medium,McFlurry with M&M’s Candies ,16.2
+Snack,McFlurry with M&M’s Candies ,7.3
+Small,McFlurry with Oreo Cookies ,10.1
+Medium,McFlurry with Oreo Cookies ,13.4
+Snack,McFlurry with Oreo Cookies ,6.7
+Medium,McFlurry with Reese's Peanut Butter Cups ,14.2
+Snack,McFlurry with Reese's Peanut Butter Cups ,7.1
+McDonald's,,0
