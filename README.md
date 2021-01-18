@@ -1,6 +1,6 @@
 # Better-Choice-at-McDonald-s
 
-This is Final Project for course CSCI-SHU 235-1 Information Visualization done by me and Ke Xu.
+This is Final Project for course CSCI-SHU 235-1 Information Visualization Fall 2020 done by me and Ke Xu.
 
 You may type in "python init_v2.py" in terminal to view the project.
 
