@@ -1,0 +1,2 @@
+# Better-Choice-at-McDonald-s
+Take McDonald’s menu and nutrition data as a source, we propose a visualization to present various nutrition indexes such as calories, fat, Cholesterol, etc. for each product in McDonald’s, divide those indexes into healthy and unhealthy categories according to the user’s input of his nutrition standard initially, and recommend several personalized optimal sets of meals for the user.
